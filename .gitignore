@@ -1,0 +1,34 @@
+# venv
+venv/
+.venv/
+
+# data
+data/
+checkpoints/
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+
+# notebooks
+.ipynb_checkpoints/
+
+# experiment tracking
+wandb/
+
+# environment
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# model weights
+*.pt
+*.pth
+*.onnx

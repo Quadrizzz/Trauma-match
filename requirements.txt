@@ -1,0 +1,30 @@
+# core
+torch
+torchvision
+numpy
+pandas
+pillow
+opencv-python
+
+# face recognition
+insightface
+onnxruntime
+
+# augmentations
+albumentations
+
+# data
+scikit-learn
+matplotlib
+seaborn
+
+# notebooks
+jupyter
+ipykernel
+
+# experiment tracking
+wandb
+
+# utilities
+tqdm
+pyyaml
