@@ -1,0 +1,13 @@
+{
+  "auc": 0.8836608996539794,
+  "accuracy": 0.8990196078431373,
+  "effective_accuracy": 0.8990196078431373,
+  "best_threshold": 0.7487437185929648,
+  "tar_at_far_0.1%": 0.15294117647058825,
+  "n_pairs_evaluated": 1020,
+  "n_skipped": 0,
+  "n_total": 1020,
+  "detection_rate": 1.0,
+  "n_unique_tattoos": 17,
+  "n_total_images": 85
+}
