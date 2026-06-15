@@ -3,8 +3,8 @@ venv/
 .venv/
 
 # data
-data/
-checkpoints/
+/data/
+/checkpoints/
 
 # python
 __pycache__/
