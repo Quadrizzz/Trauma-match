@@ -87,11 +87,15 @@ The project follows a four-month timeline divided into three months of research 
 - Build and validate synthetic degradation pipeline simulating mass casualty conditions
 - Quantify the face detection failure mode under degradation
 
-**Month 2 — Body marker detection**
-- Acquire and explore marker datasets (tattoos, dermatology, custom annotations)
-- Fine-tune YOLOv8 for multi-class marker detection
-- Build embedding model for marker matching using contrastive learning
-- Evaluate marker-based matching as standalone modality
+### Month 2 — Marker Detection and Matching (complete)
+Key findings:
+| Method | Detection Rate | Accuracy | AUC |
+|--------|---------------|----------|-----|
+| YOLO (Roboflow trained) | 0% on celebrity images | N/A | N/A |
+| Grounding DINO (per-class) | 98.3% | 86.3% (det+CLIP) | 0.796 |
+| Whole-image CLIP (baseline) | 100% | 89.9% | 0.884 |
+
+YOLO failed to generalize from the small Roboflow training set. Grounding DINO with per-class text prompts achieves robust marker detection across 5 marker types (tattoo, piercing, scar, birthmark, mole) without any training.
 
 **Month 3 — Multimodal fusion and full evaluation**
 - Implement late fusion layer with learned weights

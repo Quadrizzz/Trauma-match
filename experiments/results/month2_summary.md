@@ -124,6 +124,7 @@ The complementarity is clear — tattoo matching has lower accuracy but works in
 - `src/models/tattoo_detector.py` — YOLOv8 wrapper (retained for reference, not used in final pipeline)
 - `experiments/results/02_tattoo_detection.json` — YOLO detection results
 - `experiments/results/03_tattoo_matching.json` — CLIP matching results
+- `experiments/results/04_marker_matching_with_detection.json` — CLIP + GROUNDING DINO 
 - `checkpoints/tattoo/tattoo_yolov8_best.pt` — trained YOLO weights (in Drive)
 
 ## Limitations Noted
@@ -135,6 +136,19 @@ The complementarity is clear — tattoo matching has lower accuracy but works in
 3. **Frozen embeddings.** CLIP was not adapted to tattoos specifically. Custom contrastive training would likely improve TAR at strict FAR rates.
 
 4. **No detection in the final pipeline.** The system currently assumes tattoo-focused input images. Real deployment would require robust tattoo localization in full-body photographs.
+
+### Month 2 — Marker Detection and Matching (complete)
+
+Key findings:
+| Method | Detection Rate | Accuracy | AUC |
+|--------|---------------|----------|-----|
+| YOLO (Roboflow trained) | 0% on celebrity images | N/A | N/A |
+| Grounding DINO (per-class) | 98.3% | 86.3% (det+CLIP) | 0.796 |
+| Whole-image CLIP (baseline) | 100% | 89.9% | 0.884 |
+
+YOLO failed to generalize from the small Roboflow training set. Grounding DINO with per-class text prompts achieves robust marker detection across 5 marker types (tattoo, piercing, scar, birthmark, mole) without any training.
+
+Once you've pushed, we can move to gathering face photos of your 17 celebrities for Month 3 multimodal fusion. Let me know when you've completed the push.Claude Fable 5 is currently unavailable.
 
 ## Next Steps — Month 3
 

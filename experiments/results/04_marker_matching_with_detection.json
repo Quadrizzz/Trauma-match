@@ -1,0 +1,16 @@
+{
+  "auc": 0.7962747045529789,
+  "accuracy": 0.8634097706879362,
+  "effective_accuracy": 0.8490196078431372,
+  "best_threshold": 0.8190954773869348,
+  "tar_at_far_0.1%": 0.0,
+  "n_pairs_evaluated": 1003,
+  "n_skipped": 17,
+  "n_total": 1020,
+  "detection_rate": 0.9833333333333333,
+  "n_unique_tattoos": 17,
+  "n_total_images": 85,
+  "detector": "Grounding DINO (tiny) - per-class queries",
+  "embedder": "CLIP ViT-B-32 LAION2B",
+  "method": "detect-then-embed with max-similarity matching"
+}
